@@ -131,3 +131,15 @@ dmypy.json
 #log file
 */log_v1/*
 */log_v2/*
+
+#editor
+.idea/
+.vscode/
+
+#dataset
+dataset/KITTI/
+
+# pickle
+*.pickle
+# operator
+*.cu.o
