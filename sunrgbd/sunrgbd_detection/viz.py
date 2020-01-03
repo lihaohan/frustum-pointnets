@@ -3,7 +3,7 @@
 
     End-to-end visualization of RGB detector and 3D segmentation and box regression.
 '''
-import cPickle as pickle
+import pickle
 import numpy as np
 import argparse
 from PIL import Image
@@ -161,7 +161,7 @@ for img_id in shuffled_keys:
         if img_id==403:
             if i>=2: continue
         cv2.rectangle(img, (int(box2d[0]),int(box2d[1])), (int(box2d[2]),int(box2d[3])), (0,122,122), 3)
-        cv2.putText(img,'%d-%s'%(i,classname),(int(box2d[0]),int(box2d[1])),cv2.FONT_HERSHEY_SIMPLEX,1,(0,122,122),2,cv2.CV_AA) # For later OpenCV version use LINE_AA
+        cv2.putText(img,'%d-%s'%(i,classname),(int(box2d[0]),int(box2d[1])),cv2.FONT_HERSHEY_SIMPLEX,1,(0,122,122),2,cv2.LINE_AA) # For later OpenCV version use LINE_AA
     Image.fromarray(img).show()
     print pred2gt_idx_map
 

@@ -289,7 +289,7 @@ def get_box3d_dim_statistics(idx_filename, type_whitelist=['bed','table','sofa',
             type_list.append(obj.classname) 
             ry_list.append(heading_angle)
 
-    import cPickle as pickle
+    import pickle
     with open('box3d_dimensions.pickle','wb') as fp:
         pickle.dump(type_list, fp)
         pickle.dump(dimension_list, fp)

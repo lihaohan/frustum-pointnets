@@ -1,5 +1,5 @@
 ''' Provider class for RoI binary segmentation task '''
-import cPickle as pickle
+import pickle
 import sys
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))

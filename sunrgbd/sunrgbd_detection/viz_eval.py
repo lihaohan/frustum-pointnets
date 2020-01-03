@@ -3,7 +3,7 @@
 
     Take GT box2d, eval 3D box estimation accuracy. Also able to visualize 3D predictions.
 '''
-import cPickle as pickle
+import pickle
 import numpy as np
 import argparse
 from PIL import Image

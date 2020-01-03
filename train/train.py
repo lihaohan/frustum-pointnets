@@ -227,7 +227,7 @@ def train_one_epoch(sess, ops, train_writer):
     iou3d_correct_cnt = 0
 
     # Training with batches
-    for batch_idx in range(num_batches):
+    for batch_idx in range(int(num_batches)):
         start_idx = batch_idx * BATCH_SIZE
         end_idx = (batch_idx+1) * BATCH_SIZE
 
@@ -305,7 +305,7 @@ def eval_one_epoch(sess, ops, test_writer):
     iou3d_correct_cnt = 0
    
     # Simple evaluation with batches 
-    for batch_idx in range(num_batches):
+    for batch_idx in range(int(num_batches)):
         start_idx = batch_idx * BATCH_SIZE
         end_idx = (batch_idx+1) * BATCH_SIZE
 

@@ -21,7 +21,7 @@ sys.path.append(os.path.join(BASE_DIR, '../sunrgbd_data'))
 from utils import save_zipped_pickle
 import roi_seg_box3d_dataset
 from roi_seg_box3d_dataset import NUM_CLASS, NUM_SIZE_CLUSTER, NUM_HEADING_BIN
-import cPickle as pickle
+import pickle
 from train_util import get_batch
 
 parser = argparse.ArgumentParser()

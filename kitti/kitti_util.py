@@ -260,6 +260,9 @@ def inverse_rigid_trans(Tr):
     return inv_Tr
 
 def read_label(label_filename):
+    '''
+    Line Example: Car 0.94 3 -2.10 896.11 218.17 1241.00 374.00 1.39 1.44 3.08 2.43 1.68 3.14 -1.49
+    '''
     lines = [line.rstrip() for line in open(label_filename)]
     objects = [Object3d(line) for line in lines]
     return objects
@@ -378,11 +381,11 @@ def draw_projected_box3d(image, qs, color=(255,255,255), thickness=2):
        # Ref: http://docs.enthought.com/mayavi/mayavi/auto/mlab_helper_functions.html
        i,j=k,(k+1)%4
        # use LINE_AA for opencv3
-       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.CV_AA)
+       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.LINE_AA)
 
        i,j=k+4,(k+1)%4 + 4
-       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.CV_AA)
+       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.LINE_AA)
 
        i,j=k,k+4
-       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.CV_AA)
+       cv2.line(image, (qs[i,0],qs[i,1]), (qs[j,0],qs[j,1]), color, thickness, cv2.LINE_AA)
     return image

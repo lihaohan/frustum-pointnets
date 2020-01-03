@@ -1,4 +1,4 @@
-import cPickle as pickle
+import pickle
 import numpy as np
 import argparse
 from PIL import Image
